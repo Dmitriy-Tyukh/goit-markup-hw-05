@@ -539,18 +539,19 @@ h3 {
 
   opacity: 1;
   transform: scale(1);
-  transition: transform 500ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  
   transform: scale(0.2);
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0.2);
   opacity: 0;
 }
 
@@ -562,9 +563,13 @@ h3 {
   top: 50%;
   left: 50%;
 
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1) rotateZ(2turn);
-  transition: transform 400ms linear, opacity 500ms ease-out;
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform 250ms var(--timing-function), opacity 500ms var(--timing-function);
 
   background-color: #ffffff;
 }
@@ -590,7 +595,7 @@ h3 {
   cursor: pointer;
 
   transform: rotate(2turn);
-  transition: transform 400ms var(--timing-function) 400ms;
+  transition: transform 250ms var(--timing-function) 400ms;
 }
 
 /*       page portfolio        */
